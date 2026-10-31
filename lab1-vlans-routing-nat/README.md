@@ -4,7 +4,7 @@ Configure VLANs and inter-VLAN routing, DHCP, NAT, ACL and port security.
 
 ##### **Topology diagram**
 
-!\[Network diagram for lab](lab1-vlans-routing-nat/diagram.png)
+![Network diagram for lab](diagram.png)
 
 ##### **Addressing Table**
 
