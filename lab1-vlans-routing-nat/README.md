@@ -1,14 +1,16 @@
-## **Goal**
+# Lab 1: VLAN Routing
+
+## Goal
 
 Configure VLANs and inter-VLAN routing, DHCP, NAT, ACL and port security.
 
-## **Topology diagram**
+## Topology diagram
 
 ![Network diagram for lab](diagram.png)
 
-## **Addressing Table**
+## Addressing Table
 
-### **VLANs and Subnets**
+### VLANs and Subnets
 
 |VLAN|Name|Subnet|Gateway (R1)|Addressing|DHCP Range|
 |-|-|-|-|-|-|
@@ -18,7 +20,7 @@ Configure VLANs and inter-VLAN routing, DHCP, NAT, ACL and port security.
 
 The first 10 addresses of VLANs 10 and 20 are excluded from DHCP to leave room for static devices.
 
-### **Device Interfaces**
+### Device Interfaces
 
 |Device|Interface|Connects To|Address / VLAN|
 |-|-|-|-|
@@ -31,7 +33,7 @@ The first 10 addresses of VLANs 10 and 20 are excluded from DHCP to leave room f
 |SW1|e0/2|PC2|Access, VLAN 20|
 |SW1|e0/3|PC3|Access, VLAN 30|
 
-### **Hosts**
+### Hosts
 
 |Host|VLAN|IP Address|Gateway|DNS|
 |-|-|-|-|-|
@@ -39,7 +41,7 @@ The first 10 addresses of VLANs 10 and 20 are excluded from DHCP to leave room f
 |alpine-1|20 (Guest)|DHCP (10.0.20.x)|10.0.20.1|1.1.1.1, 8.8.8.8|
 |alpine-2|30 (Servers)|10.0.30.10/24|10.0.30.1|1.1.1.1|
 
-### **Test Matrix**
+### Test Matrix
 
 |From|To|Expected|
 |-|-|-|
@@ -49,13 +51,13 @@ The first 10 addresses of VLANs 10 and 20 are excluded from DHCP to leave room f
 |alpine-1 (Guest)|10.0.20.1 (gateway)|Works|
 |alpine-1 (Guest)|8.8.8.8|Works|
 
-## **Requirements**
+## Requirements
 
 CML Free
 
-## **How to import**
+## How to import
 
-Import topology.yaml into CML and start the lab
+Import topology.yaml into CML, set up the static address for alpine-2 as shown on configs/alpine-2 and start the lab.
 
 ## **What I learned**
 
